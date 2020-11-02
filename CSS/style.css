@@ -1,0 +1,396 @@
+:root {
+  --main-text-cl: #757575;
+  --accent-cl: #2196f3;
+  --black: #212121;
+  --white: #ffffff;
+  --bg-gray: #f5f4fa;
+  --bg-dark: #2f303a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-cl);
+  background-color: var(--white);
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+/* Задает фон */
+.gray-bg {
+  background-color: var(--bg-gray);
+}
+
+.dark-bg {
+  background-color: var(--bg-dark);
+}
+
+/* Основые свойства ссылок */
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-cl);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* outline: 2px solid teal; */
+}
+
+/* Шапка сайта */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu .list {
+  display: flex;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.logo > span {
+  color: var(--accent-cl);
+}
+
+.header .logo {
+  margin-right: 90px;
+}
+
+.menu-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--black);
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu-item .link {
+  display: block;
+  /* Паддинги добавлены для большей области действия хувера */
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.cont {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-header {
+  display: block;
+  /* Паддинги добавлены для большей области действия хувера */
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.cont-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Герой */
+
+.container-hero {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.overlay {
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../image/hero.jpg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-top: 30px;
+  margin-bottom: 200px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--white);
+  background-color: var(--accent-cl);
+}
+
+/* Наши преимущества */
+.section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.advantage-item {
+  margin-right: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.advantage-lable {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/* Чем мы занимаемся */
+.section-example {
+  padding-bottom: 95px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--black);
+}
+
+.section-grid {
+  margin-right: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+/* Наша команда */
+
+.card-grid {
+  margin-right: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: var(--white);
+}
+
+.team-member {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.187;
+  color: var(--black);
+}
+
+.team-job {
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.187;
+}
+
+.join-list {
+  display: flex;
+  justify-content: center;
+}
+
+.join-list .join-item {
+  margin-bottom: 30px;
+}
+
+.join-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  outline: 1px solid black;
+}
+
+/* Постоянные клиенты */
+
+.clients-grid {
+  margin-right: 30px;
+  flex-basis: calc(100% / 6 - 30px);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+  text-align: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link::before {
+  content: "";
+  height: 45px;
+  width: 50px;
+  background-image: url("../logo1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Подвал */
+
+.dark-bg .logo {
+  color: var(--white);
+}
+
+.dark-bg .advantage-lable {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container {
+  display: flex;
+}
+
+.footer .address {
+  margin-top: 20px;
+}
+
+.contacts-adress {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--white);
+}
+
+.contacts-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.join {
+  margin-left: 70px;
+}
