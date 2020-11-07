@@ -5,6 +5,7 @@
   --white: #ffffff;
   --bg-gray: #f5f4fa;
   --bg-dark: #2f303a;
+  --icon: #afb1b8;
 }
 
 html {
@@ -138,7 +139,8 @@ img {
 }
 
 .contacts-header {
-  display: block;
+  display: flex;
+  align-items: center;
   /* Паддинги добавлены для большей области действия хувера */
   padding-top: 32px;
   padding-bottom: 32px;
@@ -151,6 +153,35 @@ img {
 
 .cont-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.envelope-svg {
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  fill: var(--icon);
+}
+
+.smartphone-svg {
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  fill: var(--icon);
+}
+
+.contacts-header:hover,
+.contacts-header:focus {
+  border-color: var(--accent-cl);
+}
+
+.contacts-header:hover .envelope-svg,
+.contacts-header:focus .envelope-svg {
+  fill: var(--accent-cl);
+}
+
+.contacts-header:hover .smartphone-svg,
+.contacts-header:focus .smartphone-svg {
+  fill: var(--accent-cl);
 }
 
 /* Герой */
@@ -177,7 +208,7 @@ img {
     ),
     url("../image/hero.jpg");
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   background-position: center;
 }
 
@@ -371,11 +402,35 @@ img {
   margin-right: 10px;
 }
 
-.join-link {
-  display: block;
+.social-icons {
+  display: flex;
+}
+
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  outline: 1px solid black;
+
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-cl);
+}
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
+  fill: var(--white);
 }
 
 /* Постоянные клиенты */
@@ -393,18 +448,23 @@ img {
   width: 170px;
   height: 90px;
   text-align: center;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon);
   border-radius: 4px;
 }
 
-.clients-link::before {
-  content: "";
+.clients-icons-svg {
   height: 45px;
-  width: 50px;
-  background-image: url("../logo1.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: var(--icon);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-cl);
+}
+
+.clients-link:hover .clients-icons-svg,
+.clients-link:focus .clients-icons-svg {
+  fill: var(--accent-cl);
 }
 
 /* Подвал */
@@ -451,4 +511,17 @@ img {
 
 .join {
   margin-left: 70px;
+}
+
+.footer .social-icons-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-icons-svg {
+  fill: var(--white);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-cl);
 }

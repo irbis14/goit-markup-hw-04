@@ -5,6 +5,7 @@
   --white: #ffffff;
   --gray: #f5f4fa;
   --bg-dark: #2f303a;
+  --icon: #afb1b8;
 }
 
 html {
@@ -138,7 +139,8 @@ img {
 }
 
 .contacts-header {
-  display: block;
+  display: flex;
+  align-items: center;
   /* Паддинги добавлены для большей области действия хувера */
   padding-top: 32px;
   padding-bottom: 32px;
@@ -151,6 +153,35 @@ img {
 
 .cont-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.envelope-svg {
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  fill: var(--icon);
+}
+
+.smartphone-svg {
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  fill: var(--icon);
+}
+
+.contacts-header:hover,
+.contacts-header:focus {
+  border-color: var(--accent-cl);
+}
+
+.contacts-header:hover .envelope-svg,
+.contacts-header:focus .envelope-svg {
+  fill: var(--accent-cl);
+}
+
+.contacts-header:hover .smartphone-svg,
+.contacts-header:focus .smartphone-svg {
+  fill: var(--accent-cl);
 }
 
 /* Примеры работ */
@@ -209,6 +240,9 @@ img {
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .section-lable {
@@ -228,7 +262,6 @@ img {
 }
 
 .grid-item {
-  border: 1px solid #eeeeee;
   margin-right: 30px;
   flex-basis: calc(100% / 3 - 30px);
   background: var(--white);
@@ -238,9 +271,9 @@ img {
   margin-bottom: 30px;
 }
 
-/* Без этого не помещались карточки с бордером, не смогла найти почему не влезают :( */
-.grid-item:nth-child(3n) {
-  margin-right: 0;
+.grid-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Подвал */
@@ -259,20 +292,6 @@ img {
 
 .footer .address {
   margin-top: 20px;
-}
-
-.contacts-adress {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--white);
-}
-
-.contacts-item {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .advantage-lable {
@@ -306,9 +325,24 @@ img {
   margin-right: 10px;
 }
 
-.join-link {
-  display: block;
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  outline: 1px solid black;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-cl);
 }
